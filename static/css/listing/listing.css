@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cardbox {
+    display: block;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #ddd;
+    border-radius: 10px;
+    width: 80%;
+    height: 250px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: transform 0.2s, background--color 0.2s;
+    -webkit-transition: transform 0.2s, background--color 0.2s;
+    -moz-transition: transform 0.2s, background--color 0.2s;
+    -ms-transition: transform 0.2s, background--color 0.2s;
+    -o-transition: transform 0.2s, background--color 0.2s;
+}
+
+.shop-details {
+    width: 100%;
+    padding-top: 2px;
+}
+
+.shop-name {
+    margin-top: 2px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #00918E;
+}
+
+.address,
+.city {
+    margin-top: -3px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(128, 128, 128);
+}
+
+.city:after {
+    display: block;
+    height: 2px;
+    background-color: #cbe9e8;
+    content: " ";
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.owner-box {
+    padding-top: 10px;
+    width: 35%;
+    float: left;
+    margin-left: 12%;
+}
+
+.products-box {
+    padding-top: 10px;
+    width: 35%;
+    float: left;
+    margin-left: 8%;
+}
+
+.owner-name {
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #00918E;
+}
+
+.owner-name:after {
+    display: block;
+    width: 50px;
+    border: 0.8px solid rgb(208, 238, 237);
+    content: " ";
+    margin: 1px auto;
+    margin-top: 4px;
+}
+
+.contact {
+    margin-top: -3px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(133, 132, 132);
+}
+
+.sells-mask,
+.sells-sanitizer {
+    margin-top: -3px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(133, 132, 132);
+}
+
+.sells-mask img,
+.contact img,
+.sells-sanitizer img {
+    margin-top: -3px;
+    margin-left: 20px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.shop-open {
+    margin-top: -3px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(133, 132, 132);
+}
+
+.masks-available {
+    margin-top: -3px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(133, 132, 132);
+}
+
+.sanitizer-available {
+    margin-top: -3px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(133, 132, 132);
+}
+
+.updated-on:before {
+    display: block;
+    width: 60%;
+    border: 0.8px solid rgb(208, 238, 237);
+    content: "";
+    margin: 2px auto;
+}
+
+.updated-on {
+    float: left;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    color: rgb(133, 132, 132);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.sanitizer-available img,
+.shop-open img,
+.masks-available img {
+    margin-top: -3px;
+    margin-left: 20px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.cardbox:hover {
+    background-color: #fcfcfc;
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    -o-transform: scale(1.04);
+}
+
+@media only screen and (max-width: 800px) {
+    .cardbox {
+        height: 332px;
+    }
+    .owner-box {
+        width: 100%;
+        margin-left: 4%;
+    }
+    .products-box {
+        width: 100%;
+        margin-left: 4%;
+    }
+}

@@ -1,0 +1,568 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ByeCovid</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static "images/logo1.svg" %}">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "fonts/icomoon/style.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery-ui.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/bootstrap-datepicker.css" %}">
+
+    <link rel="stylesheet" href="{% static "fonts/flaticon/font/flaticon.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/aos.css" %}">
+    <link rel="stylesheet" href="{% static "css/rangeslider.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/form/style.css" %}">
+
+
+</head>
+
+<body>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar" role="banner">
+
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-11 col-xl-2">
+                        <h1 class="mb-0 site-logo"><a href="/" class="text-white h2 mb-0">ByeCovid.in</a></h1>
+                    </div>
+                    <div class="col-12 col-md-10 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="active"><a href="/"><span>Home</span></a></li>
+                                <li><a href="#" onclick="modalDisplay()"><span>Register</span></a></li>
+
+                                <li><a href="listings/"><span>Listings</span></a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+                </div>
+
+            </div>
+    </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url('{% static "images/hero_1.jpg" %}');" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+
+                <div class="col-md-10">
+
+
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-10 text-center">
+                            <h1 data-aos="fade-up">Find Nearby <span class="typed-words"></span></h1>
+                            <p data-aos="fade-up" class=" w-75 mx-auto"> Get all the medical stores selling masks, sanitizers in your area.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
+                        <form method="post">
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-12 col-xl-4 no-sm-border border-right">
+                                    <div class="wrap-icon">
+                                        <span class="icon icon-room"></span>
+                                        <input type="text" class="form-control" list="locations" placeholder="Location">
+                                        <datalist id="locations">
+                        <option value="Mumbai">
+                        <option value="Chennai">
+                      </datalist>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-12 col-xl-4">
+                                    <div class="select-wrap">
+                                        <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
+                                        <select class="form-control" name="" id="">
+                        <option value="">All Categories</option>
+                        <option value="">Pharmacy</option>
+                        <option value="">Hospital</option>
+                      </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-3 ml-auto text-right">
+                                    <input type="submit" class="btn text-white btn-primary" style="width: 100%;" value="Search">
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="site-section" data-aos="fade">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center border-primary">
+                    <h2 class="font-weight-light text-primary">Stores of the day</h2>
+                    <p class="color-black-opacity-5"></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_1.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark" data-toggle="tooltip" data-placement="left" title="Bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Hotels</a>
+                            <h2 class="mb-1"><a href="listings-single.html">Luxe Hotel</a></h2>
+                            <span class="address">West Orange, New York</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_2.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Restaurants</a>
+                            <h2 class="mb-1"><a href="listings-single.html">Jones Grill &amp; Restaurants</a></h2>
+                            <span class="address">Brooklyn, New York</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_3.jpg" %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Events</a>
+                            <h2 class="mb-1"><a href="listings-single.html">Live Band</a></h2>
+                            <span class="address">West Orange, New York</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_4.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark" data-toggle="tooltip" data-placement="left" title="Bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Others</a>
+                            <h2 class="mb-1"><a href="listings-single.html">Gourmet Coffees</a></h2>
+                            <span class="address">New York City</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_5.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Spa</a>
+                            <h2 class="mb-1"><a href="listings-single.html">La Italia Spa</a></h2>
+                            <span class="address">Italy</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
+
+                    <div class="listing-item">
+                        <div class="listing-image">
+                            <img src="{% static "images/img_6.jpg" %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="listing-item-content">
+                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
+                            <a class="px-3 mb-3 category" href="#">Stores</a>
+                            <h2 class="mb-1"><a href="listings-single.html">Super Market Mall</a></h2>
+                            <span class="address">West Orange, New York</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center border-primary">
+                    <h2 class="font-weight-light text-primary">Available Categories</h2>
+                    <p class="color-black-opacity-5"></p>
+                </div>
+
+            </div>
+
+            <div class="row align-items-stretch" style="display: flex; justify-content: space-between;">
+
+                <div class="col-6 col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+                    <a href="#" class="popular-category h-100">
+                        <span class="icon mb-3"><span class="flaticon-hotel"></span></span>
+                        <span class="caption mb-2 d-block">Hospitals</span>
+                        <span class="number">489</span>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+                    <a href="#" class="popular-category h-100">
+                        <span class="icon mb-3"><span class="flaticon-restaurant"></span></span>
+                        <span class="caption mb-2 d-block">Pharmacies</span>
+                        <span class="number">482</span>
+                    </a>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+<div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7 text-center border-primary">
+                    <h2 class="font-weight-light text-primary">Ways to Contribute</h2>
+                    <p class="color-black-opacity-5"> </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+                    <div class="how-it-work-step">
+                        <div class="img-wrap">
+                            <img src="{% static "images/health.svg" %}" alt="" class="img-fluid">
+                        </div>
+                        <span class="number">1</span>
+                        <h3>Register</h3>
+                        <p>Register your medical store if you are the owner.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+                    <div class="how-it-work-step">
+                        <div class="img-wrap">
+                            <img src="{% static "images/networking.svg" %}" alt="" class="img-fluid">
+                        </div>
+                        <span class="number">2</span>
+                        <h3>Share</h3>
+                        <p>Spread this platform among medical stores to increase its reach.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
+                    <div class="how-it-work-step">
+                        <div class="img-wrap">
+                            <img src="{% static "images/phone.svg" %}" alt="" class="img-fluid">
+                        </div>
+                        <span class="number">3</span>
+                        <h3>Donate</h3>
+                        <p>Help us maintain our servers by contributing via PhonePay or Paytm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <img src="{% static "images/image1.jpg" %}" alt="" class="img-fluid rounded">
+                </div>
+                <div class="col-md-5 ml-auto">
+                    <h2 class="text-primary mb-3">From Our Side</h2>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="border p-3 rounded mb-2">
+                                <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1" class="accordion-item h5 d-block mb-0">What do we do?</a>
+
+                                <div class="collapse" id="collapse-1">
+                                    <div class="pt-2">
+                                        <p class="mb-0">Amid this pandemic, people are having a tough time finding hospitals and medical stores having masks and sanitizers. Also this is not safe for people to roam around city to find these essential services. Hence we provide a platform for people to find the hospitals and pharmacies which are working during the lockdown and equipped with essential services like masks,sanitizers or not. We update the information daily to ensure its usefulness among the community. In due time, we will be adding more features to facilitate people protect themselves from Corona.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border p-3 rounded mb-2">
+                                <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2" class="accordion-item h5 d-block mb-0">How it works?</a>
+
+                                <div class="collapse" id="collapse-2">
+                                    <div class="pt-2">
+                                        <p class="mb-0">We collect data from pharmacies all over India regarding the availability of masks and sanitizers to facilitate the required ones. We ping the
+                                        medical store owners daily to update the availability of masks, sanitizers.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border p-3 rounded mb-2">
+                                <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3" class="accordion-item h5 d-block mb-0">Is this available in my city?</a>
+
+                                <div class="collapse" id="collapse-3">
+                                    <div class="pt-2">
+                                        <p class="mb-0">We are trying to contact pharmacies and hospitals all over India to expand our reach as soon as possible. In this campaign we would like you to contribute by refering this platform to your known pharmacy owners.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border p-3 rounded mb-2">
+                                <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4" class="accordion-item h5 d-block mb-0">Is it free?</a>
+
+                                <div class="collapse" id="collapse-4">
+                                    <div class="pt-2">
+                                        <p class="mb-0">Yes it is absolutely free as we are supporting a cause. You can help us maintain our servers by contributing through Paytm or Phonepay.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="py-5 bg-primary">
+        <div class="container">
+
+        </div>
+    </div>
+
+
+    </div>
+    <section>
+        <div id="myModal" class="modal fadeIn">
+            <div class="modal-content">
+                <div class="header">
+                    <div class="heading">
+                        Please Fill This Form
+                    </div>
+                    <div class="cross">
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <form action="" id="myForm">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="fname">First Name:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="fname" id="fname" placeholder="First Name">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="lname">Last Name:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="lname" placeholder="Last Name" id="lname">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="contact">Contact No:</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="text" name="contact" placeholder="Contact No" id="contact">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label for="owner">Do you own a pharmacy?</label>
+                            </div>
+                            <div class="col span-2-of-3">
+                                <input type="checkbox" name="owner" id="yes" onclick="displayMore()">Yes
+                                <input type="checkbox" name="owner" onclick="displayError()" id="no">No
+                            </div>
+                        </div>
+                        <div class="inner-display">
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="mask">Do you sell Masks?</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="checkbox" name="mask" id="mask-yes" onclick="displayMask()">Yes
+                                    <input type="checkbox" name="mask" id="mask-no" onclick="displayMaskNo()">No
+                                </div>
+                            </div>
+                            <div class="inner-mask">
+                                <div class="row">
+                                    <div class="col span-1-of-3">
+                                        <label for="mask-range">Price Range:</label>
+                                    </div>
+                                    <div class="col span-2-of-3">
+                                        <div class="row left">
+                                            <div class="span-1-of-2 col">
+                                                <input type="number" name="mask-from" id="mask-range" placeholder="From"><span>To</span>
+                                            </div>
+                                            <div class="span-1-of-2 col">
+                                                <input type="number" name="mask-to" id="mask-range" placeholder="To">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="sanitizer">Do you sell Sanitizers?</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="checkbox" name="sanitizer" id="sanitizer-yes" onclick="displaySanitizer()">Yes
+                                    <input type="checkbox" name="sanitizer" id="sanitizer-no" onclick="displaySanitizerNo()">No
+                                </div>
+                            </div>
+                            <div class="inner-sanitizer">
+                                <div class="row">
+                                    <div class="col span-1-of-3">
+                                        <label for="sanitizer-range">Price Range:</label>
+                                    </div>
+                                    <div class="col span-2-of-3">
+                                        <div class="row left">
+                                            <div class="span-1-of-2 col">
+                                                <input type="number" name="sanitizer-from" id="sanitizer-range" placeholder="From"> <span> To </span>
+                                            </div>
+                                            <div class="span-1-of-2 col">
+                                                <input type="number" name="sanitizer-to" id="sanitizer-range" placeholder="To">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="shop-name">Shop Name:</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="text" name="shop-name" placeholder="Shop Name" id="shop-name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="address">Address:</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="text" name="address" placeholder="Address" id="address">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="pincode">Pincode:</label>
+                                </div>
+                                <div class="col span-2-of-3 full">
+                                    <input type="number" name="pincode" placeholder="Pincode" id="pincode">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="form-button" onclick="filled()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="own" style="display: none;">
+                    Thank you for filling out the form! &#128522;
+                </div>
+                <div class="notown" style="display: none;">
+                    Thank you for filling out the form! &#128522; some more text
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+    <script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui.js" %}"></script>
+    <script src="{% static "js/popper.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/jquery.stellar.min.js" %}"></script>
+    <script src="{% static "js/jquery.countdown.min.js" %}"></script>
+    <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "js/bootstrap-datepicker.min.js" %}"></script>
+    <script src="{% static "js/aos.js" %}"></script>
+    <script src="{% static "js/rangeslider.min.js" %}"></script>
+
+
+    <script src="{% static "js/typed.js" %}"></script>
+    <script>
+        var typed = new Typed('.typed-words', {
+            strings: ["Pharmacies", "Dispensaries", "Hospitals"],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+        });
+    </script>
+    <script src="{% static "js/form/form.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+
+</body>
+
+</html>
