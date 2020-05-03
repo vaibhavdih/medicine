@@ -25,14 +25,26 @@ class RegisteredPerson(models.Model):
     registration_time = models.TimeField(auto_now_add=True)
 
 class DailyUpdate(models.Model):
-    person_id = models.CharField(max_length=255)
+    person = models.ForeignKey(RegisteredPerson,on_delete=models.CASCADE,related_name='daily')
     shop_open = models.CharField(max_length=10)
     mask_avail = models.CharField(max_length=10)
     sanitizer_avail = models.CharField(max_length=10)
     update_date = models.DateField(default=date.today)
     update_time = models.TimeField(auto_now_add=True)
 
-
-
+class Web_Registration(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name=models.CharField(max_length=255)
+    contact_name=models.CharField(max_length=255)
+    shop_owner = models.CharField(max_length=255)
+    mask_avail=models.CharField(max_length=255)
+    mask_price = models.CharField(max_length=255)
+    sanitizer_avail = models.CharField(max_length=255)
+    sanitizer_price = models.CharField(max_length=255)
+    shop_name=models.CharField(max_length=255)
+    address=models.CharField(max_length=255)
+    pincode=models.CharField(max_length=255)
+    update_date = models.DateField(default=date.today)
+    update_time = models.TimeField(auto_now_add=True)
 
 

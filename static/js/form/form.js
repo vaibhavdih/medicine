@@ -67,17 +67,5 @@ window.onclick = function(event) {
     }
 }
 
-document.querySelector(".form-button").addEventListener("click", (e) => {
-    e.preventDefault();
-})
 
-function filled() {
-    document.querySelector('.form-button').disabled = true;
-    var checkBox = document.getElementById("yes");
-    document.querySelector('.form-box').style.display = "none";
-    if (checkBox.checked == true) {
-        document.querySelector('.own').style.display = "block";
-    } else {
-        document.querySelector('.own').style.display = "block";
-    }
-}
+

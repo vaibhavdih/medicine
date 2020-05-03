@@ -60,8 +60,6 @@
                                 <li class="active"><a href="/"><span>Home</span></a></li>
                                 <li><a href="#" onclick="modalDisplay()"><span>Register</span></a></li>
 
-                                <li><a href="listings/"><span>Listings</span></a></li>
-
                             </ul>
                         </nav>
                     </div>
@@ -93,27 +91,24 @@
                     </div>
 
                     <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
-                        <form method="post">
+                        <form method="post" id="form_pincode">
                             <div class="row align-items-center">
 
                                 <div class="col-lg-12 col-xl-4 no-sm-border border-right">
                                     <div class="wrap-icon">
                                         <span class="icon icon-room"></span>
-                                        <input type="text" class="form-control" list="locations" placeholder="Location">
-                                        <datalist id="locations">
-                        <option value="Mumbai">
-                        <option value="Chennai">
-                      </datalist>
+                                        <input type="text" class="form-control" placeholder="Enter Pincode" id="input_pincode">
+
                                     </div>
 
                                 </div>
                                 <div class="col-lg-12 col-xl-4">
                                     <div class="select-wrap">
                                         <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                                        <select class="form-control" name="" id="">
-                        <option value="">All Categories</option>
-                        <option value="">Pharmacy</option>
-                        <option value="">Hospital</option>
+                                        <select class="form-control" name="" id="input_category">
+                        <option value=0>All Categories</option>
+                        <option value=1>Pharmacy</option>
+
                       </select>
                                     </div>
                                 </div>
@@ -123,115 +118,6 @@
 
                             </div>
                         </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="site-section" data-aos="fade">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center border-primary">
-                    <h2 class="font-weight-light text-primary">Stores of the day</h2>
-                    <p class="color-black-opacity-5"></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_1.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark" data-toggle="tooltip" data-placement="left" title="Bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Hotels</a>
-                            <h2 class="mb-1"><a href="listings-single.html">Luxe Hotel</a></h2>
-                            <span class="address">West Orange, New York</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_2.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Restaurants</a>
-                            <h2 class="mb-1"><a href="listings-single.html">Jones Grill &amp; Restaurants</a></h2>
-                            <span class="address">Brooklyn, New York</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_3.jpg" %}" alt="" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Events</a>
-                            <h2 class="mb-1"><a href="listings-single.html">Live Band</a></h2>
-                            <span class="address">West Orange, New York</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_4.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark" data-toggle="tooltip" data-placement="left" title="Bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Others</a>
-                            <h2 class="mb-1"><a href="listings-single.html">Gourmet Coffees</a></h2>
-                            <span class="address">New York City</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_5.jpg" %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Spa</a>
-                            <h2 class="mb-1"><a href="listings-single.html">La Italia Spa</a></h2>
-                            <span class="address">Italy</span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-4 col-lg-4">
-
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="{% static "images/img_6.jpg" %}" alt="" class="img-fluid">
-                        </div>
-                        <div class="listing-item-content">
-                            <a href="listings-single.html" class="bookmark"><span class="icon-heart"></span></a>
-                            <a class="px-3 mb-3 category" href="#">Stores</a>
-                            <h2 class="mb-1"><a href="listings-single.html">Super Market Mall</a></h2>
-                            <span class="address">West Orange, New York</span>
-                        </div>
                     </div>
 
                 </div>
@@ -287,7 +173,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="{% static "images/health.svg" %}" alt="" class="img-fluid">
+                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a5tcp-whqq1.svg" alt="" class="img-fluid" width="180">
                         </div>
                         <span class="number">1</span>
                         <h3>Register</h3>
@@ -297,7 +183,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="{% static "images/networking.svg" %}" alt="" class="img-fluid">
+                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ag9z8-1r25r.svg" alt="" class="img-fluid" width="180">
                         </div>
                         <span class="number">2</span>
                         <h3>Share</h3>
@@ -307,7 +193,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="{% static "images/phone.svg" %}" alt="" class="img-fluid">
+                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ax48b-7zu0c.svg" alt="" class="img-fluid" width="180">
                         </div>
                         <span class="number">3</span>
                         <h3>Donate</h3>
@@ -404,7 +290,7 @@
                     </div>
                 </div>
                 <div class="form-box">
-                    <form action="" id="myForm">
+                    <form method="post" id="myForm" >
                         <div class="row">
                             <div class="col span-1-of-3">
                                 <label for="fname">First Name:</label>
@@ -428,7 +314,7 @@
                                 <label for="contact">Contact No:</label>
                             </div>
                             <div class="col span-2-of-3">
-                                <input type="text" name="contact" placeholder="Contact No" id="contact">
+                                <input type="number" name="contact" placeholder="Contact No" id="contact">
                             </div>
                         </div>
 
@@ -459,10 +345,10 @@
                                     <div class="col span-2-of-3">
                                         <div class="row left">
                                             <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-from" id="mask-range" placeholder="From"><span>To</span>
+                                                <input type="number" name="mask-range" id="mask-from" placeholder="From"><span>To</span>
                                             </div>
                                             <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-to" id="mask-range" placeholder="To">
+                                                <input type="number" name="mask-range" id="mask-to" placeholder="To">
                                             </div>
                                         </div>
                                     </div>
@@ -485,10 +371,10 @@
                                     <div class="col span-2-of-3">
                                         <div class="row left">
                                             <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer-from" id="sanitizer-range" placeholder="From"> <span> To </span>
+                                                <input type="number" name="sanitizer" id="sanitizer-from" placeholder="From"> <span> To </span>
                                             </div>
                                             <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer-to" id="sanitizer-range" placeholder="To">
+                                                <input type="number" name="sanitizer" id="sanitizer-from" placeholder="To">
                                             </div>
                                         </div>
                                     </div>
@@ -519,16 +405,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <button type="submit" class="form-button" onclick="filled()">Submit</button>
+
+                        <div class="row" style="display:flex;justify-content: center;">
+
+                           <input type="submit" class="btn text-white btn-primary" style="width: 70%;" value="Submit">
+
                         </div>
+
                     </form>
                 </div>
                 <div class="own" style="display: none;">
                     Thank you for filling out the form! &#128522;
                 </div>
                 <div class="notown" style="display: none;">
-                    Thank you for filling out the form! &#128522; some more text
+                    Thank you for filling out the form! &#128522;
                 </div>
             </div>
         </div>
@@ -546,8 +436,7 @@
     <script src="{% static "js/bootstrap-datepicker.min.js" %}"></script>
     <script src="{% static "js/aos.js" %}"></script>
     <script src="{% static "js/rangeslider.min.js" %}"></script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static "js/typed.js" %}"></script>
     <script>
         var typed = new Typed('.typed-words', {
@@ -558,6 +447,73 @@
             startDelay: 1000,
             loop: true,
             showCursor: true
+        });
+
+        var URL = window.location.href;
+
+        $("#form_pincode").submit(function(event){
+            event.preventDefault();
+            var pincode=document.getElementById("input_pincode").value;
+            var category = document.getElementById("input_category").value;
+            window.location.replace(URL+"listings/"+pincode+"/")
+
+        });
+
+        $("#myForm").submit(function(event){
+            event.preventDefault();
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var contact=document.getElementById("contact").value;
+
+            if(document.getElementById("yes").checked == true){
+                var shop_own = "yes";
+                console.log(shop_own);
+
+                if(document.getElementById("mask-yes").checked == true){
+                var mask_avail = "yes"
+                var mask_price = document.getElementById("mask-from").value.toString()+"-"+document.getElementById("mask-to").value.toString();
+            }else{
+                var mask_avail = "no";
+                var mask_price="not applicable";
+            }
+                console.log(mask_price);
+            if(document.getElementById("sanitizer-yes").checked == true){
+                var sanitizer_avail = "yes"
+                var sanitizer_price = document.getElementById("sanitizer-from").value.toString()+"-"+document.getElementById("sanitizer-to").value.toString();
+            }else{
+                var sanitizer_avail = "no";
+                var sanitizer_price="not applicable";
+            }
+                console.log(sanitizer_avail);
+            var shop_name = document.getElementById("shop-name").value;
+            var address = document.getElementById("address").value;
+            var pincode = document.getElementById("pincode").value;
+
+            }else{
+                var shop_own="no";
+                var mask_avail="not applicable"
+                 var mask_price="not applicable";
+                 var sanitizer_avail="not applicable";
+                  var sanitizer_price="not applicable";
+                   var shop_name="not applicable";
+                    var address="not applicable";
+                     var pincode="not applicable";
+            }
+
+
+
+            var data={"first_name":fname,"last_name":lname,"contact_name":contact.toString(),"shop_owner":shop_own,"mask_avail":mask_avail,"mask_price":mask_price,"sanitizer_avail":sanitizer_avail,"sanitizer_price":sanitizer_price,"shop_name":shop_name,"address":address,"pincode":pincode.toString()}
+            $.post(URL,data,function(response){
+
+                document.querySelector('.form-box').style.display = "none";
+
+        document.querySelector('.own').style.display = "block";
+
+
+
+        });
+
+
         });
     </script>
     <script src="{% static "js/form/form.js" %}"></script>

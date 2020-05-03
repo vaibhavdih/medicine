@@ -8,7 +8,7 @@ urlpatterns = [
     path('api/reg/all/',RegisterPeopleAll.as_view()),
     path('api/update/all/',DailyUpdateAll.as_view()),
     path('',views.show_details,name='show_details'),
-    path('listings/',views.show_listings,name='show_listings'),
+    path('listings/<int:pk>/',views.show_data,name='show_data'),
 
 ]
 

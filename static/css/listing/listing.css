@@ -9,8 +9,8 @@ body {
     background-color: white;
     box-shadow: 2px 2px 2px 2px #ddd;
     border-radius: 10px;
-    width: 80%;
-    height: 250px;
+    width: 88%;
+    height: 260px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -32,7 +32,7 @@ body {
     width: 100%;
     text-align: center;
     font-size: 24px;
-    color: #00918E;
+    color: #00cadd;
 }
 
 .address,
@@ -73,12 +73,12 @@ body {
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: #00918E;
+    color: #00cadd;
 }
 
 .owner-name:after {
     display: block;
-    width: 50px;
+    width: 80%;
     border: 0.8px solid rgb(208, 238, 237);
     content: " ";
     margin: 1px auto;
