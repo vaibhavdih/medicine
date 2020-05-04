@@ -76,9 +76,7 @@ def show_details(request):
     if request.method=='GET':
         return render(request,"index.html")
     else:
-
         a=Web_Registration.objects.create(first_name=request.POST['first_name'],last_name=request.POST['last_name'],contact_name=request.POST['contact_name'],shop_owner=request.POST["shop_owner"],mask_avail=request.POST['mask_avail'],mask_price=request.POST['mask_price'],sanitizer_avail=request.POST["sanitizer_avail"],sanitizer_price=request.POST['sanitizer_price'],shop_name=request.POST['shop_name'],address=request.POST['address'],pincode=request.POST['pincode'])
-
         return HttpResponse("you")
 
 def show_data(request,pk):
@@ -89,4 +87,9 @@ def show_data(request,pk):
             query = person.daily.all()
             if len(query) != 0:
                 b.append(query[len(query)-1])
-        return render(request,"listings.html",{"shops":b,"pincode":str(pk)})
+        if len(b)==0:
+            key=0
+        else:
+            key=1
+
+        return render(request,"listings.html",{"shops":b,"pincode":str(pk),'key':key})

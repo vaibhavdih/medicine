@@ -65,7 +65,7 @@
                     </div>
 
 
-                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="margin-right: 6px;" ></span></a></div>
 
                 </div>
 
@@ -173,7 +173,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/a5tcp-whqq1.svg" alt="" class="img-fluid" width="180">
+                            <img src="{% static "images/register1.jpg" %}" alt="" class="img-fluid" >
                         </div>
                         <span class="number">1</span>
                         <h3>Register</h3>
@@ -183,7 +183,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ag9z8-1r25r.svg" alt="" class="img-fluid" width="180">
+                            <img src="{% static "images/networking.jpg" %}" alt="" class="img-fluid">
                         </div>
                         <span class="number">2</span>
                         <h3>Share</h3>
@@ -193,7 +193,7 @@
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4">
                     <div class="how-it-work-step">
                         <div class="img-wrap">
-                            <img src="https://s4.aconvert.com/convert/p3r68-cdx67/ax48b-7zu0c.svg" alt="" class="img-fluid" width="180">
+                            <img src="{% static "images/donate.jpg" %}" alt="" class="img-fluid">
                         </div>
                         <span class="number">3</span>
                         <h3>Donate</h3>
@@ -515,6 +515,78 @@
 
 
         });
+
+        function displayMore() {
+    var checkBox = document.getElementById("yes");
+    if (checkBox.checked == true) {
+        document.getElementById("no").checked = false;
+        document.querySelector('.inner-display').style.display = "block";
+    } else {
+        document.querySelector('.inner-display').style.display = "none";
+    }
+}
+
+function displayError() {
+    var checkBox = document.getElementById("no");
+    if (checkBox.checked == true) {
+        document.getElementById("yes").checked = false;
+        document.querySelector('.inner-display').style.display = "none";
+    }
+}
+
+function displayMask() {
+    var checkBox = document.getElementById("mask-yes");
+    if (checkBox.checked == true) {
+        document.querySelector('.inner-mask').style.display = "block";
+    } else {
+        document.querySelector('.inner-mask').style.display = "none";
+    }
+}
+
+function displayMaskNo() {
+    var checkBox = document.getElementById("mask-no");
+    if (checkBox.checked == true) {
+        document.getElementById("mask-yes").checked = false;
+        document.querySelector('.inner-mask').style.display = "none";
+    }
+}
+
+function displaySanitizer() {
+    var checkBox = document.getElementById("sanitizer-yes");
+    if (checkBox.checked == true) {
+        document.querySelector('.inner-sanitizer').style.display = "block";
+    } else {
+        document.querySelector('.inner-sanitizer').style.display = "none";
+    }
+}
+
+
+function displaySanitizerNo() {
+    var checkBox = document.getElementById("sanitizer-no");
+    if (checkBox.checked == true) {
+        document.getElementById("sanitizer-yes").checked = false;
+        document.querySelector('.inner-sanitizer').style.display = "none";
+    }
+}
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+function modalDisplay() {
+
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
     </script>
     <script src="{% static "js/form/form.js" %}"></script>
     <script src="{% static "js/main.js" %}"></script>

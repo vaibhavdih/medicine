@@ -57,7 +57,7 @@
 
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a href="/"><span>Home</span></a></li>
-                                <li><a href="#" onclick="modalDisplay()"><span>Register</span></a></li>
+
 
                                 <li class="active"><a href="/"><span>Listings</span></a></li>
                             </ul>
@@ -65,12 +65,12 @@
                     </div>
 
 
-                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="margin-right: 6px;"></span></a></div>
 
                 </div>
 
             </div>
-    </div>
+
 
     </header>
 
@@ -100,7 +100,11 @@
     <div class="site-section bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8" style="width:70%;">
+                <div class="col-lg-8" >
+                {% if key == 0 %}
+                    <div style="display:flex;justify-content: center;">No data found for your area.</div><br>
+                {% endif %}
+
 
                     {% for shop in shops %}
 
@@ -208,150 +212,7 @@
 
 
 
-    <section>
-        <div id="myModal" class="modal fadeIn">
-            <div class="modal-content">
-                <div class="header">
-                    <div class="heading">
-                        Please Fill This Form
-                    </div>
-                    <div class="cross">
-                        <span class="close">&times;</span>
-                    </div>
-                </div>
-                <div class="form-box">
-                    <form action="" id="myForm">
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="fname">First Name:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="text" name="fname" id="fname" placeholder="First Name">
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="lname">Last Name:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="text" name="lname" placeholder="Last Name" id="lname">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="contact">Contact No:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="text" name="contact" placeholder="Contact No" id="contact">
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="owner">Do you own a pharmacy?</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="checkbox" name="owner" id="yes" onclick="displayMore()">Yes
-                                <input type="checkbox" name="owner" onclick="displayError()" id="no">No
-                            </div>
-                        </div>
-                        <div class="inner-display">
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="mask">Do you sell Masks?</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="checkbox" name="mask" id="mask-yes" onclick="displayMask()">Yes
-                                    <input type="checkbox" name="mask" id="mask-no" onclick="displayMaskNo()">No
-                                </div>
-                            </div>
-                            <div class="inner-mask">
-                                <div class="row">
-                                    <div class="col span-1-of-3">
-                                        <label for="mask-range">Price Range:</label>
-                                    </div>
-                                    <div class="col span-2-of-3">
-                                        <div class="row left">
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-from" id="mask-range" placeholder="From"><span>To</span>
-                                            </div>
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-to" id="mask-range" placeholder="To">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="sanitizer">Do you sell Sanitizers?</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="checkbox" name="sanitizer" id="sanitizer-yes" onclick="displaySanitizer()">Yes
-                                    <input type="checkbox" name="sanitizer" id="sanitizer-no" onclick="displaySanitizerNo()">No
-                                </div>
-                            </div>
-                            <div class="inner-sanitizer">
-                                <div class="row">
-                                    <div class="col span-1-of-3">
-                                        <label for="sanitizer-range">Price Range:</label>
-                                    </div>
-                                    <div class="col span-2-of-3">
-                                        <div class="row left">
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer-from" id="sanitizer-range" placeholder="From"> <span> To </span>
-                                            </div>
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer-to" id="sanitizer-range" placeholder="To">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="shop-name">Shop Name:</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="text" name="shop-name" placeholder="Shop Name" id="shop-name">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="address">Address:</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="text" name="address" placeholder="Address" id="address">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="pincode">Pincode:</label>
-                                </div>
-                                <div class="col span-2-of-3 full">
-                                    <input type="number" name="pincode" placeholder="Pincode" id="pincode">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <button type="submit" class="form-button" onclick="filled()">Submit</button>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="own" style="display: none;">
-                    Thank you for filling out the form! &#128522;
-                </div>
-                <div class="notown" style="display: none;">
-                    Thank you for filling out the form! &#128522; some more text
-                </div>
-            </div>
-        </div>
-
-    </section>
     <script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
     <script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
     <script src="{% static "js/jquery-ui.js" %}"></script>
@@ -368,9 +229,12 @@
     <script src="{% static "js/main.js" %}"></script>
     <script src="{% static "js/form/form.js" %}"></script>
     <script>
+
         $( document ).ready(function() {
     document.getElementById("input_pincode").value={{ pincode }};
+
 });
+
         var URL = window.location.href;
 
         $("#form_pincode").submit(function(event){
@@ -380,7 +244,31 @@
             window.location.replace(location.protocol+"//"+location.host +"/listings/"+pincode+"/");
 
         });
+
+
+
     </script>
+
+    <script type = "text/javascript" >
+        var i=0;
+
+        history.pushState(null, null, location.href);
+        history.back();
+        history.forward();
+        window.onpopstate = function () {
+            i=i+1;
+            if(i>1 && i%2 != 0){
+
+
+                window.location.replace(location.protocol+"//"+location.host +"/");
+            }else{
+
+            console.log(i);
+              history.go(1);}
+           };
+    </script>
+
+
 </body>
 
 </html>
