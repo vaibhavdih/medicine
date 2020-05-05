@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{% static "css/rangeslider.css" %}">
 
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <link rel="stylesheet" href="{% static "css/form/style.css" %}">
+
 
 
 </head>
@@ -58,14 +58,14 @@
 
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li class="active"><a href="/"><span>Home</span></a></li>
-                                <li><a href="#" onclick="modalDisplay()"><span>Register</span></a></li>
+                                <li><a href="register/"><span>Register</span></a></li>
 
                             </ul>
                         </nav>
                     </div>
 
 
-                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="margin-right: 6px;" ></span></a></div>
+                    <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"  ></span></a></div>
 
                 </div>
 
@@ -142,14 +142,14 @@
                     <a href="#" class="popular-category h-100">
                         <span class="icon mb-3"><span class="flaticon-hotel"></span></span>
                         <span class="caption mb-2 d-block">Hospitals</span>
-                        <span class="number">489</span>
+                        <span class="number">counting ...</span>
                     </a>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
                     <a href="#" class="popular-category h-100">
                         <span class="icon mb-3"><span class="flaticon-restaurant"></span></span>
                         <span class="caption mb-2 d-block">Pharmacies</span>
-                        <span class="number">482</span>
+                        <span class="number">counting ...</span>
                     </a>
                 </div>
 
@@ -197,7 +197,7 @@
                         </div>
                         <span class="number">3</span>
                         <h3>Donate</h3>
-                        <p>Help us maintain our servers by contributing via PhonePay or Paytm.</p>
+                        <p>Help us maintain our servers by contributing via PhonePay or Paytm on </p><b>+91-9546780227</b>
                     </div>
                 </div>
             </div>
@@ -253,8 +253,8 @@
 
                                 <div class="collapse" id="collapse-4">
                                     <div class="pt-2">
-                                        <p class="mb-0">Yes it is absolutely free as we are supporting a cause. You can help us maintain our servers by contributing through Paytm or Phonepay.
-                                        </p>
+                                        <p class="mb-0">Yes it is absolutely free as we are supporting a cause. You can help us maintain our servers by contributing through Paytm or Phonepay on
+                                        </p><b>+91-9546780227</b>
                                     </div>
                                 </div>
                             </div>
@@ -290,129 +290,7 @@
                     </div>
                 </div>
                 <div class="form-box">
-                    <form method="post" id="myForm" >
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="fname">First Name:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="text" name="fname" id="fname" placeholder="First Name">
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="lname">Last Name:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="text" name="lname" placeholder="Last Name" id="lname">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="contact">Contact No:</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="number" name="contact" placeholder="Contact No" id="contact">
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label for="owner">Do you own a pharmacy?</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <input type="checkbox" name="owner" id="yes" onclick="displayMore()">Yes
-                                <input type="checkbox" name="owner" onclick="displayError()" id="no">No
-                            </div>
-                        </div>
-                        <div class="inner-display">
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="mask">Do you sell Masks?</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="checkbox" name="mask" id="mask-yes" onclick="displayMask()">Yes
-                                    <input type="checkbox" name="mask" id="mask-no" onclick="displayMaskNo()">No
-                                </div>
-                            </div>
-                            <div class="inner-mask">
-                                <div class="row">
-                                    <div class="col span-1-of-3">
-                                        <label for="mask-range">Price Range:</label>
-                                    </div>
-                                    <div class="col span-2-of-3">
-                                        <div class="row left">
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-range" id="mask-from" placeholder="From"><span>To</span>
-                                            </div>
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="mask-range" id="mask-to" placeholder="To">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="sanitizer">Do you sell Sanitizers?</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="checkbox" name="sanitizer" id="sanitizer-yes" onclick="displaySanitizer()">Yes
-                                    <input type="checkbox" name="sanitizer" id="sanitizer-no" onclick="displaySanitizerNo()">No
-                                </div>
-                            </div>
-                            <div class="inner-sanitizer">
-                                <div class="row">
-                                    <div class="col span-1-of-3">
-                                        <label for="sanitizer-range">Price Range:</label>
-                                    </div>
-                                    <div class="col span-2-of-3">
-                                        <div class="row left">
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer" id="sanitizer-from" placeholder="From"> <span> To </span>
-                                            </div>
-                                            <div class="span-1-of-2 col">
-                                                <input type="number" name="sanitizer" id="sanitizer-from" placeholder="To">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="shop-name">Shop Name:</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="text" name="shop-name" placeholder="Shop Name" id="shop-name">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="address">Address:</label>
-                                </div>
-                                <div class="col span-2-of-3">
-                                    <input type="text" name="address" placeholder="Address" id="address">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col span-1-of-3">
-                                    <label for="pincode">Pincode:</label>
-                                </div>
-                                <div class="col span-2-of-3 full">
-                                    <input type="number" name="pincode" placeholder="Pincode" id="pincode">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row" style="display:flex;justify-content: center;">
-
-                           <input type="submit" class="btn text-white btn-primary" style="width: 70%;" value="Submit">
-
-                        </div>
-
-                    </form>
                 </div>
                 <div class="own" style="display: none;">
                     Thank you for filling out the form! &#128522;
@@ -459,131 +337,8 @@
 
         });
 
-        $("#myForm").submit(function(event){
-            event.preventDefault();
-            var fname=document.getElementById("fname").value;
-            var lname=document.getElementById("lname").value;
-            var contact=document.getElementById("contact").value;
-
-            if(document.getElementById("yes").checked == true){
-                var shop_own = "yes";
-                console.log(shop_own);
-
-                if(document.getElementById("mask-yes").checked == true){
-                var mask_avail = "yes"
-                var mask_price = document.getElementById("mask-from").value.toString()+"-"+document.getElementById("mask-to").value.toString();
-            }else{
-                var mask_avail = "no";
-                var mask_price="not applicable";
-            }
-                console.log(mask_price);
-            if(document.getElementById("sanitizer-yes").checked == true){
-                var sanitizer_avail = "yes"
-                var sanitizer_price = document.getElementById("sanitizer-from").value.toString()+"-"+document.getElementById("sanitizer-to").value.toString();
-            }else{
-                var sanitizer_avail = "no";
-                var sanitizer_price="not applicable";
-            }
-                console.log(sanitizer_avail);
-            var shop_name = document.getElementById("shop-name").value;
-            var address = document.getElementById("address").value;
-            var pincode = document.getElementById("pincode").value;
-
-            }else{
-                var shop_own="no";
-                var mask_avail="not applicable"
-                 var mask_price="not applicable";
-                 var sanitizer_avail="not applicable";
-                  var sanitizer_price="not applicable";
-                   var shop_name="not applicable";
-                    var address="not applicable";
-                     var pincode="not applicable";
-            }
 
 
-
-            var data={"first_name":fname,"last_name":lname,"contact_name":contact.toString(),"shop_owner":shop_own,"mask_avail":mask_avail,"mask_price":mask_price,"sanitizer_avail":sanitizer_avail,"sanitizer_price":sanitizer_price,"shop_name":shop_name,"address":address,"pincode":pincode.toString()}
-            $.post(URL,data,function(response){
-
-                document.querySelector('.form-box').style.display = "none";
-
-        document.querySelector('.own').style.display = "block";
-
-
-
-        });
-
-
-        });
-
-        function displayMore() {
-    var checkBox = document.getElementById("yes");
-    if (checkBox.checked == true) {
-        document.getElementById("no").checked = false;
-        document.querySelector('.inner-display').style.display = "block";
-    } else {
-        document.querySelector('.inner-display').style.display = "none";
-    }
-}
-
-function displayError() {
-    var checkBox = document.getElementById("no");
-    if (checkBox.checked == true) {
-        document.getElementById("yes").checked = false;
-        document.querySelector('.inner-display').style.display = "none";
-    }
-}
-
-function displayMask() {
-    var checkBox = document.getElementById("mask-yes");
-    if (checkBox.checked == true) {
-        document.querySelector('.inner-mask').style.display = "block";
-    } else {
-        document.querySelector('.inner-mask').style.display = "none";
-    }
-}
-
-function displayMaskNo() {
-    var checkBox = document.getElementById("mask-no");
-    if (checkBox.checked == true) {
-        document.getElementById("mask-yes").checked = false;
-        document.querySelector('.inner-mask').style.display = "none";
-    }
-}
-
-function displaySanitizer() {
-    var checkBox = document.getElementById("sanitizer-yes");
-    if (checkBox.checked == true) {
-        document.querySelector('.inner-sanitizer').style.display = "block";
-    } else {
-        document.querySelector('.inner-sanitizer').style.display = "none";
-    }
-}
-
-
-function displaySanitizerNo() {
-    var checkBox = document.getElementById("sanitizer-no");
-    if (checkBox.checked == true) {
-        document.getElementById("sanitizer-yes").checked = false;
-        document.querySelector('.inner-sanitizer').style.display = "none";
-    }
-}
-
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-function modalDisplay() {
-
-}
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 

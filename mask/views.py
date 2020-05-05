@@ -93,3 +93,12 @@ def show_data(request,pk):
             key=1
 
         return render(request,"listings.html",{"shops":b,"pincode":str(pk),'key':key})
+
+@csrf_exempt
+def register_shop(request):
+    if request.method=='GET':
+        return render(request,"index1.html")
+    else:
+        print(request.POST)
+        a=Web_Registration.objects.create(first_name=request.POST['first_name'],last_name=request.POST['last_name'],contact_name=request.POST['contact_name'],shop_owner=request.POST["shop_owner"],mask_avail=request.POST['mask_avail'],mask_price=request.POST['mask_price'],sanitizer_avail=request.POST["sanitizer_avail"],sanitizer_price=request.POST['sanitizer_price'],shop_name=request.POST['shop_name'],address=request.POST['address'],pincode=request.POST['pincode'])
+        return HttpResponse("you")
